@@ -31,7 +31,7 @@ def filterData(arr, indices):
     return res
 
 count = [0,0]
-with open(f"{ADDRESS}/filteredTest.csv", 'w') as outf:
+with open(f"{ADDRESS}/filtered.csv", 'w') as outf:
     print("----- Mission Start -----")
     for findex in range(1, FILE_NUM+1):
         print(f"Processing file #{findex}/{FILE_NUM} ... ", end='')
