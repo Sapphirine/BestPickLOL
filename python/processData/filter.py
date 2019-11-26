@@ -21,7 +21,7 @@ illegalValue = ["", " ", "-1"]
 def filterData(arr, indices):
     res = []
     for index in indices:
-        if arr[index] in illegalValue:
+        if not arr[index] or arr[index] in illegalValue:
             arr[index] = "0"
         res.append(arr[index])
     if res[2] == "Win":

@@ -1,7 +1,7 @@
 from pyspark.ml import Pipeline
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.feature import StringIndexer, OneHotEncoderEstimator, VectorAssembler
-from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.classification import LogisticRegressionModel
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
@@ -44,8 +44,7 @@ if __name__ == "__main__":
     dataTest = rSplit[1].select("features", labelColumn)
 
     # Creat, train, fit model
-    lr = LogisticRegression(maxIter=20,regParam=0.01,probabilityCol="probability")
-    model = lr.fit(dataTrain.withColumnRenamed(labelColumn, "label"))
+    model = LogisticRegressionModel.load("model6")
     result = model.transform(dataTest).select(labelColumn, "prediction", "probability").collect()
     
     # Check, show result

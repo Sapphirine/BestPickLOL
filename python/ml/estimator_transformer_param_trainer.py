@@ -39,13 +39,14 @@ if __name__ == "__main__":
     data = assembler.transform(data)
 
     # Split data into train and test
-    rSplit = data.randomSplit([0.8,0.2], 100)
+    rSplit = data.randomSplit([0.95,0.05], 100)
     dataTrain = rSplit[0].select("features", labelColumn)
     dataTest = rSplit[1].select("features", labelColumn)
 
     # Creat, train, fit model
     lr = LogisticRegression(maxIter=20,regParam=0.01,probabilityCol="probability")
     model = lr.fit(dataTrain.withColumnRenamed(labelColumn, "label"))
+    model.save("model6")
     result = model.transform(dataTest).select(labelColumn, "prediction", "probability").collect()
     
     # Check, show result

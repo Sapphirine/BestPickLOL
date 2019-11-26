@@ -12,6 +12,14 @@
     <link rel="icon" type="image/png" href="img/square.png">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/d0b7ea6fca.js" crossorigin="anonymous"></script>
+    <style>
+        .icon-red {
+            color: #b30000
+        }
+        .icon-orange {
+            color: #ffaa00
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -38,6 +46,9 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1"
                         aria-disabled="true">Demo</a>
                 </li>
@@ -51,8 +62,8 @@
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Data Collection</a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Data Processing<i class="fas fa-cog fa-spin"></i></a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Machine Learning<i class="fas fa-ban"></i></a>
+            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Data Processing</a>
+            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Machine Learning<i class="fas fa-cog fa-spin"></i></a>
             <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Recommandation<i class="fas fa-ban"></i></a>
             </div>
         </div>
@@ -86,7 +97,7 @@
                     </p>
                     <p>We had run it for a week, and got in total 1,200,000 rows / 300 MB of match data.</p>
                 </div>
-                <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                     <h1>Data Processing</h1>
 
                     <h2>Drop Incomplete Data</h2>
@@ -140,8 +151,43 @@
                     <p>After this, we have compelete the data processing part and ready for feeding data to our mechine learning model.</p>
                     <p>* We will use only a small part of our data to try to build the system and verify its function.</p>
                 </div>
-                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                    We havn't went this far.
+                <div class="tab-pane fade show active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    <h1>Machine Learning</h1>
+                    <h2>Algorithms Testing  </h2>
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Algorithm</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Tester</th>
+                                <th scope="col">Remark</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Logistic Regression</td>
+                                <td class="icon-red"><i class="fas fa-times-circle"></i> Failed</td>
+                                <td>L.H. & Y.Z.H.</td>
+                                <td>Accuracy is too low</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Radom Forest</td>
+                                <td class="icon-red"><i class="fas fa-times-circle"></i> Failed</td>
+                                <td>L.H.</td>
+                                <td>Dense data reqired</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>One Vs Rest</td>
+                                <td class="icon-orange"><i class="far fa-circle"></i> Queue</td>
+                                <td>Y.Z.H.</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
                     We havn't went this far.
