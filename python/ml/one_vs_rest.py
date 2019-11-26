@@ -1,7 +1,7 @@
 from pyspark.ml import Pipeline
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.feature import StringIndexer, OneHotEncoderEstimator, VectorAssembler
-from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.classification import LogisticRegression, OneVsRest
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
@@ -25,7 +25,7 @@ if __name__ == "__main__":
         featureColumns.append(column)
     
     # Load DataFrame
-    data = spark.read.load("data/3187/all/t6.csv",format="csv",sep=',',inferSchema="true",header="false")
+    data = spark.read.load("data/3187/yzh/t6.csv",format="csv",sep=',',inferSchema="true",header="false")
     data = data.toDF(*originColumns)
 
     # Turn string to index
@@ -44,9 +44,10 @@ if __name__ == "__main__":
     dataTest = rSplit[1].select("features", labelColumn)
 
     # Creat, train, fit model
-    lr = LogisticRegression(maxIter=20,regParam=0.01,probabilityCol="probability")
-    model = lr.fit(dataTrain.withColumnRenamed(labelColumn, "label"))
-    result = model.transform(dataTest).select(labelColumn, "prediction", "probability").collect()
+    lr = LogisticRegression(maxIter=20,regParam=0.01)
+    ovr = OneVsRest(classifier=lr)
+    model = ovr.fit(dataTrain.withColumnRenamed(labelColumn, "label"))
+    result = model.transform(dataTest).select(labelColumn, "prediction").collect()
     
     # Check, show result
     counter = [0,0]

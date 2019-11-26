@@ -1,5 +1,5 @@
 
-ADDRESS = "data/3187/yzh"
+ADDRESS = "data/3187/all"
 MODE = "normal"
 AIM_STAGE = 18 # Max 6(normal) or 18(champion)
 
