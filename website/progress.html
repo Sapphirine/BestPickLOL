@@ -22,6 +22,9 @@
         .icon-gray {
             color: #AAAAAA
         }
+        .icon-green {
+            color: #00AA00
+        }
     </style>
 </head>
 <body>
@@ -52,8 +55,7 @@
                     <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i class="fas fa-external-link-alt"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1"
-                        aria-disabled="true">Demo</a>
+                    <a class="nav-link" href="demo.html">Demo</a>
                 </li>
             </ul>
         </div>
@@ -66,8 +68,8 @@
             <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Data Collection</a>
             <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Data Processing</a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Machine Learning<i class="fas fa-cog fa-spin"></i></a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Recommandation<i class="fas fa-ban"></i></a>
+            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Machine Learning<i class="fas fa-cog fa-spin"></i></a>
+            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Recommandation<i class="fas fa-cog fa-spin"></i></a>
             </div>
         </div>
         <div class="col-9">
@@ -154,7 +156,7 @@
                     <p>After this, we have compelete the data processing part and ready for feeding data to our mechine learning model.</p>
                     <p>* We will use only a small part of our data to try to build the system and verify its function.</p>
                 </div>
-                <div class="tab-pane fade show active" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                     <h1>Machine Learning</h1>
                     <h2>Algorithms Testing  </h2>
                     <table class="table">
@@ -199,22 +201,27 @@
                             <tr>
                                 <th scope="row">5</th>
                                 <td>Data Sheet Transform</td>
-                                <td class="icon-orange"><i class="far fa-circle"></i> Queue</td>
+                                <td class="icon-gray"><i class="far fa-pause-circle"></i> Suspend</td>
                                 <td>Y.Z.H.</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <th scope="row">6</th>
                                 <td>ZZC Statistics</td>
-                                <td class="icon-orange"><i class="fas fa-tools"></i> Processing</td>
-                                <td>Y.Z.H.</td>
-                                <td>Successfully predicted win. Further works are requiered</td>
+                                <td class="icon-green"><i class="fas fa-check-circle"></i> Success</td>
+                                <td>Y.Z.H. & L.H.</td>
+                                <td></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                    We havn't went this far.
+                <div class="tab-pane fade show active" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    <h1>Recommandation</h1>
+                    <h2>ZZC Statistics</h2>
+                    <p>We think there are two things matter in winning rate: Cooperation and Confrontation performance. So we built two matrices (Mco & Mop) to track on these two parameters.</p>
+                    <p>We initialize Mco and Mop to 555×555 all zero matrices. Then view each line.</p>
+                    <h2>Demo</h2>
+                    <p>Demo is now under building.</p>
                 </div>
             </div>
         </div>
