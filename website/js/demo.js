@@ -2,29 +2,42 @@ const moduleItems = document.getElementsByClassName("module");
 const form = document.forms["paras"];
 const r = document.getElementById("r");
 const rs = document.getElementsByClassName("rs");
+const btn = document.getElementById("btn");
 for (moduleItem of moduleItems) {
     moduleItem.innerHTML = getModule(moduleItem.id);
+    moduleItem.id = "";
 }
+var btnChangeTiming;
+
+function btnChange() {
+    btn.className = "btn btn-primary btn-lg btn-block";
+    btn.innerHTML = "Resubmit";
+}
+
 function selectChange(self) {
     self.style.color = (self.value == 0) ? "rgba(0,0,0,.3)" : "black";
 }
 
 function formSubmit() {
-    let bans, pick1, pick2, need;
+    clearTimeout(btnChangeTiming);
+    btn.className = "btn btn-warning btn-lg btn-block";
+    btn.innerHTML = "Calculating...";
+    btn.onclick = null;
+    let bans, pick0, pick1, need;
     list = [];
     for(i = 1; i <= 5; i++) {
         domNode = form["p"+i+"m"];
         v = parseInt(domNode.value);
         list.push(v);
     }
-    pick1 = list.join(',');
+    pick0 = list.join(',');
     list = [];
     for(i = 6; i <= 10; i++) {
         domNode = form["p"+i+"m"];
         v = parseInt(domNode.value);
         list.push(v);
     }
-    pick2 = list.join(',');
+    pick1 = list.join(',');
     list = [];
     for(i = 1; i <= 10; i++) {
         domNode = form["b"+i+"m"];
@@ -35,14 +48,20 @@ function formSubmit() {
     need = form["rn"].value;
     let message = {
         bans: bans,
+        pick0: pick0,
         pick1: pick1,
-        pick2: pick2,
         need: need
     }
-    ajaxTo("GET", "http://127.0.0.1:5002/url/data", message, showReturn, true);
+    //ajaxTo("GET", "http://127.0.0.1:5002/url/data", message, showReturn, true);
+    ajaxTo("GET", "server/noserver.php", message, showReturn, true);
     return false;
 }
 function showReturn(json) {
+    window.scrollTo(0,document.body.scrollHeight);
+    btn.className = "btn btn-success btn-lg btn-block";
+    btn.innerHTML = "Success";
+    btn.onclick = formSubmit;
+    btnChangeTiming = setTimeout(btnChange, 3000);
     r.id = "";
     if(form["rn"].value == 1) {
         rn = json.recommend.split(",");
@@ -54,6 +73,7 @@ function showReturn(json) {
         for(index = 0; index < 10; index++)
             rs[index].innerHTML = getName(parseInt(rna[index]))+" & "+getName(parseInt(rnb[index]));
     }
+    window.scrollTo(0,document.body.scrollHeight);
 }
 
 function obj2str(obj) {
@@ -70,6 +90,7 @@ function ajaxTo(method = "POST", url, para, callback, jsonFormat = true) {
     xmlhttp.onreadystatechange = function() {
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             if(jsonFormat) {
+                console.log("Response: "+xmlhttp.responseText);
                 callback(JSON.parse(xmlhttp.responseText));
             } else {
                 callback({
@@ -85,6 +106,7 @@ function ajaxTo(method = "POST", url, para, callback, jsonFormat = true) {
             });
         }
     }
+    console.log("Require: "+url+"?"+obj2str(para));
     xmlhttp.open(method, method=="GET" ? url+"?"+obj2str(para) : url, true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(method=="POST" ? obj2str(para) : "");
@@ -244,7 +266,7 @@ function getName(id) {
 
 function getModule(name) {
     return "\
-    <select name='"+name+"' style='color:rgba(0,0,0,.3)' onchange='selectChange(this)'>\
+    <select name='"+name+"' id='"+name+"' style='color:rgba(0,0,0,.3)' class='form-control' onchange='selectChange(this)'>\
         <option value='0' style='color:rgba(0,0,0,.3)'>-[ Not specify ]-</option>\
         <option value='266' style='color:black'>Aatrox</option>\
         <option value='103' style='color:black'>Ahri</option>\

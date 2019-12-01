@@ -108,10 +108,13 @@ def recommend1(teammates, opponents,ban):
         data.append((i + 1, D_max))
     res = sorted(data, key=lambda x: -x[1])
     champion = ""
+    score = ""
     for i in range(9):
         champion = champion + str(res[i][0]) + ","
+        score = score + str(res[i][1]) + ","
     champion = champion + str(res[10][0])
-    recommend = {"recommend": champion}
+    score = score + str(res[10][1])
+    recommend = {"recommend": champion, "score": score}
     return recommend
 
 
@@ -156,9 +159,12 @@ def UrlTest(data):
     res_list = {}
     inputs = log_and_extract_input(UrlTest, {"parameter": data})
     data_new = inputs['query_params']
-    teammates = list(map(int, data_new['pick1'].split(',')))
-    opponents = list(map(int, data_new['pick2'].split(',')))
+    teammates = list(map(int, data_new['pick0'].split(',')))
+    teammates = [x for x in teammates if x != 0]
+    opponents = list(map(int, data_new['pick1'].split(',')))
+    opponents = [x for x in opponents if x != 0]
     bans = list(map(int, data_new['bans'].split(',')))
+    bans = [x for x in bans if x != 0]
     need = int(data_new['need'])
     if need == 1:
         res_list = recommend1(teammates, opponents, bans)

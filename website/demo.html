@@ -9,10 +9,34 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="img/square.png">
     <script src="https://kit.fontawesome.com/d0b7ea6fca.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        nav {
+            width: 100%;
+        }
+        h1 {
+            width: 100%;
+        }
         h3 {
             margin-top: 1em;
+        }
+        table {
+            width: 100%;
+        }
+        .table2 {
+            margin: 2em 0;
+        }
+        .btn {
+            margin-bottom: 1em;
+            transition: all .5s;
         }
         #r {
             display: none;
@@ -22,6 +46,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
+            <img src="img/square.png" width="30" height="30" alt="">
             The Best BP
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -30,29 +55,18 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Welcome</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="progress.html">Progress</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i class="fas fa-external-link-alt"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="demo.html">Demo</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="progress.html">Progress</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i class="fas fa-external-link-alt"></i></a></li>
+                <li class="nav-item active"><a class="nav-link" href="demo.html">Demo</a></li>
             </ul>
         </div>
     </nav>
 
-    <h1>Demo</h1>
+    <h1 class="display-3">The Best BP<span class="badge badge badge-success" style="font-size: .2em; vertical-align: top;position: relative; top: 1.5em;left: .5em;">Demo</span></h1>
+
     <form name="paras" onsubmit="return false;">
         <table>
             <tr><td colspan="4"><h3>Ban Turn</h3></td></tr>
@@ -100,30 +114,44 @@
             <tr><td colspan="4"><h3>Setting</h3></td></tr>
             <tr>
                 <td>I need:</td>
-                <td>
-                    <select name="rn" id="rn">
+                <td colspan="3">
+                    <select class="form-control" name="rn" id="rn">
                         <option value="1" selected>1 hero</option>
                         <option value="2">2 heroes</option>
                     </select>
                 </td>
             </tr>
         </table>
-        <table id="r">
-            <tr><td colspan="4"><h3>Recommandations</h3></td></tr>
-            <tr><td>1st pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>2nd pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>3rd pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>4th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>5th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>6th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>7th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>8th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>9th pick:</td><td class="rs" colspan="3">/</td></tr>
-            <tr><td>10th pick:</td><td class="rs" colspan="3">/</td></tr>
+
+        <table class="table table2" id="r">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Pick Order</th>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row"> 1st</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 2nd</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 3rd</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 4th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 5th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 6th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 7th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 8th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row"> 9th</th><td class="rs" colspan="3">/</td></tr>
+                <tr><th scope="row">10th</th><td class="rs" colspan="3">/</td></tr>
+            </tbody>
         </table>
+        
         <table>
-            <tr><td colspan="4"><h3>Action</h3></td></tr>
-            <tr><td><input type="submit" value="Submit" onclick="formSubmit();"></td></tr>
+            <tr><td colspan="2"><h3></h3></td></tr>
+            <tr>
+                <td><button type="button" class="btn btn-primary btn-lg btn-block" onclick="formSubmit();" id="btn">Submit</button></td>
+            </tr>
+            <tr>
+                <td><a href="https://zh.surveymonkey.com/r/ZVBBTNW"><button type="button" class="btn btn-light btn-lg btn-block">Take Survey <i class="far fa-kiss-wink-heart"></i></button></a></td>
+            </tr>
         </table>
     </form>
 
