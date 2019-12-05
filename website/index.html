@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Best PB in LOL</title>
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="img/square.png">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://kit.fontawesome.com/d0b7ea6fca.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
@@ -25,20 +25,15 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Welcome</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="progress.html">Progress</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i class="fas fa-external-link-alt"></i></a>
+                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub <i
+                            class="fas fa-external-link-alt"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="demo.html">Demo</a>
@@ -47,63 +42,31 @@
         </div>
     </nav>
 
-    <h1 class="display-3">The Best Pick & Ban</h1>
-    <p>Headache of choosing heroes? Want to make a excellent cooperation with your teammates? Let's do it!</p>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md icontext">
-                <i class="far fa-keyboard"></i>
-                Input situation
-            </div>
-            <div class="col-md icontext">
-                <i class="fas fa-gamepad"></i>
-                Follow recommandation
-            </div>
-            <div class="col-md icontext">
-                <i class="far fa-laugh-squint"></i>
-                Win the game
-            </div>
-        </div>
+    <div class="main">
+        <h1 class="display-3">The Best Pick & Ban</h1>
+        <p>Find the best legends to win</p>
+        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='demo.html';">Get Start</button>
     </div>
 
-    <h1>How It Works?</h1>
-    <p>We query data from Riot official API, and use machine learning to find the inner relationship among legends' ban and pick.</p>
-    <p>After the model builded, we can process data from gamer, and reply him which legend to pick or ban can he get the highest winning rate.</p>
-
-    <h1>Why This Project Exist?</h1>
-    <p>This is the course project of EECS6893 Big Data Analysis of Columbia University.</p>
-    <p>We chose this project is because it's fun, and hoping to give us (and others) some useful tips in BP. Inorder to enjoy more fun in game.</p>
-
-    <h1>Why Is This Site So Ugly?</h1>
-    <p>Because this is just a demo webside for progress tracking.</p>
-    <p>We will build it more carefully after we finished our project and release the demo.</p>
-
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
-        <div class="toast-header">
-            <img src="img/square.png" class="rounded mr-2" style="height: 1.5em;">
-            <strong class="mr-auto">Follow Our Steps</strong>
-            <small class="text-muted">Nov.4</small>
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="toast-body">
-            This project is now under building. If you are interested, please follow us on github.
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script>
-        //$('.toast').toast("show")
-    </script>
+    <footer>
+        Powered by
+        <img alt="Riot Games"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Riot_Games_%282019%29.svg/1920px-Riot_Games_%282019%29.svg.png"> |
+        <img src="https://www.mathjax.org/badge/mj-logo.svg" alt="MathJax"> |
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1024px-Bootstrap_logo.svg.png"
+            alt="Bootstrap"> |
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1024px-PHP-logo.svg.png" alt="PHP"> |
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tencent_Logo.svg/220px-Tencent_Logo.svg.png" alt="Tencent">
+    </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
 </html>
