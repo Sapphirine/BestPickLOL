@@ -6,7 +6,7 @@ body {
     justify-content: center;
     text-align: center;
     background-image: linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)), url(https://static.invenglobal.com/upload/image/2019/11/27/i1574888444441900.jpeg);
-
+    background-attachment: fixed;
 }
 nav {
     position: sticky;

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Our Progress - Best PB in LOL</title>
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <title>Best BP - Progress</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="img/square.png">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/d0b7ea6fca.js" crossorigin="anonymous"></script>
@@ -18,17 +16,21 @@
         .icon-red {
             color: #b30000
         }
+
         .icon-orange {
             color: #ffaa00
         }
+
         .icon-gray {
             color: #AAAAAA
         }
+
         .icon-green {
             color: #00AA00
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
@@ -48,8 +50,7 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub
-                    <i class="fas fa-external-link-alt"></i></a>
+                    <a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="demo.html">Demo</a>
@@ -63,22 +64,26 @@
     <div class="row">
         <div class="col-3">
             <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active"
-                id="list-dc-list" data-toggle="list" href="#list-dc" role="tab" aria-controls="dc">Data Collection</a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
-                id="list-dp-list" data-toggle="list" href="#list-dp" role="tab" aria-controls="dp">Data Processing</a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
-                id="list-a-list" data-toggle="list" href="#list-a" role="tab" aria-controls="a">Algorithms</a>
-            <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
-                id="list-i-list" data-toggle="list" href="#list-i" role="tab" aria-controls="i">Implement</a>
+                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action active"
+                    id="list-dc-list" data-toggle="list" href="#list-dc" role="tab" aria-controls="dc">Data
+                    Collection</a>
+                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+                    id="list-dp-list" data-toggle="list" href="#list-dp" role="tab" aria-controls="dp">Data
+                    Processing</a>
+                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+                    id="list-a-list" data-toggle="list" href="#list-a" role="tab" aria-controls="a">Algorithms</a>
+                <a class="list-group-item d-flex justify-content-between align-items-center list-group-item-action"
+                    id="list-i-list" data-toggle="list" href="#list-i" role="tab" aria-controls="i">Implement</a>
             </div>
         </div>
         <div class="col-9">
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-dc" role="tabpanel" aria-labelledby="list-home-list">
                     <h1>Data Collection</h1>
-                    <p>We use API on <a href="https://developer.riotgames.com/apis#match-v4">Riotgames Developer</a> to get match data.</p>
-                    <p>We use python sent request to API. Get response JSON data. After parsing, save it into a cvs file.</p>
+                    <p>We use API on <a href="https://developer.riotgames.com/apis#match-v4">Riotgames Developer</a> to
+                        get match data.</p>
+                    <p>We use python sent request to API. Get response JSON data. After parsing, save it into a cvs
+                        file.</p>
                     <p>We saved the following 70 data of each game (if avaliable):</p>
                     <ol>
                         <li>seasonId</li>
@@ -91,15 +96,19 @@
                         <li>gameVersion</li>
                         <li>teams[0-1].win <span class="badge badge-secondary badge-pill">2</span></li>
                         <li>teams[0-1].bans[0-4].pickTurn <span class="badge badge-secondary badge-pill">10</span></li>
-                        <li>teams[0-1].bans[0-4].championId <span class="badge badge-secondary badge-pill">10</span></li>
+                        <li>teams[0-1].bans[0-4].championId <span class="badge badge-secondary badge-pill">10</span>
+                        </li>
                         <li>participants[0-9].championId <span class="badge badge-secondary badge-pill">10</span></li>
                         <li>participants[0-9].spell1Id <span class="badge badge-secondary badge-pill">10</span></li>
                         <li>participants[0-9].spell2Id <span class="badge badge-secondary badge-pill">10</span></li>
-                        <li>participants[0-9].timeline.lane <span class="badge badge-secondary badge-pill">10</span></li>
+                        <li>participants[0-9].timeline.lane <span class="badge badge-secondary badge-pill">10</span>
+                        </li>
                     </ol>
                     <p>
-                        Because of the limitation to small developer as us, we can only request 2 times per second and 100 times
-                        per 2 minutes. To accelerate our data getting process, we created 9 accounts and run our request program
+                        Because of the limitation to small developer as us, we can only request 2 times per second and
+                        100 times
+                        per 2 minutes. To accelerate our data getting process, we created 9 accounts and run our request
+                        program
                         day and night.
                     </p>
                     <p>We had run it for a week, and got in total 1,200,000 rows / 300 MB of match data.</p>
@@ -108,7 +117,8 @@
                     <h1>Data Processing</h1>
 
                     <h2>Drop Incomplete Data</h2>
-                    <p>We first filter our total data, and only kept the data that in "classical" game mode and have complete BP
+                    <p>We first filter our total data, and only kept the data that in "classical" game mode and have
+                        complete BP
                         information.</p>
                     <p>After this filtering, we remains 600,000 rows / 150 MB data</p>
 
@@ -119,7 +129,8 @@
                         <span class="badge badge-secondary">participants[0-9].spell1Id</span></p>
 
                     <h2>Split Data Into Stages</h2>
-                    <p>As we know, BP has many stages (precisely 18). Each game has two teams, let's call them Blue Team and Red
+                    <p>As we know, BP has many stages (precisely 18). Each game has two teams, let's call them Blue Team
+                        and Red
                         Team. And each team has five players, we call them "participants"</p>
                     <p>In each stage, one team will pick / ban one or more hero(es).</p>
                     <p>If this is a champion game, the BP turn will be like this:</p>
@@ -143,7 +154,8 @@
                         <li><span class="badge badge-danger">P9</span> Red team pick 1 hero</li>
                         <li><span class="badge badge-primary">P10</span> Blue team pick 1 hero</li>
                     </ol>
-                    <p>However, in normal online matched games, the ban turns are done before game start secretly in each team. The
+                    <p>However, in normal online matched games, the ban turns are done before game start secretly in
+                        each team. The
                         order will be like this:</p>
                     <ol>
                         <li><span class="badge badge-success">B</span> Ban heroes</li>
@@ -155,13 +167,16 @@
                         <li><span class="badge badge-danger">P10</span> Red team pick 1 hero</li>
                     </ol>
                     <p>
-                        For each stage, we split out the data which can be known by the players in that situation, and the data about the
-                        <span class="badge badge-secondary">Game Duration</span>, 
-                        <span class="badge badge-secondary">Game Map</span> and 
+                        For each stage, we split out the data which can be known by the players in that situation, and
+                        the data about the
+                        <span class="badge badge-secondary">Game Duration</span>,
+                        <span class="badge badge-secondary">Game Map</span> and
                         <span class="badge badge-secondary">Winner</span>.
                     </p>
-                    <p>After this, we have compelete the data processing part and ready for feeding data to our mechine learning model.</p>
-                    <p>* We will use only a small part of our data to try to build the system and verify its function.</p>
+                    <p>After this, we have compelete the data processing part and ready for feeding data to our mechine
+                        learning model.</p>
+                    <p>* We will use only a small part of our data to try to build the system and verify its function.
+                    </p>
                 </div>
                 <div class="tab-pane fade" id="list-a" role="tabpanel" aria-labelledby="list-a-list">
                     <h1>Algorithms</h1>
@@ -228,63 +243,88 @@
                     <h3>Training Module</h3>
                     <p>We think there are two things matter in winning rate: Cooperation and Confrontation performance.
                         So we built two matrices (\(M_{CO}\) & \(M_{OP}\)) to track on these two parameters.</p>
-                    <p>We initialize \(M_{CO}\) , \(M_{OP}\) and \(cM_{CO}\) , \(cM_{OP}\) to \(555 \times 555\) all zero matrices.
-                        Among these matrices, \(M_{CO}\) is to calculate cooperation score of two heroes;\(M_{OP}\) is to calculate
-                        confrontation score of two heroes in blue team's view; \(M_{OP}\) and \(cM_{CO}\) are to count the times
+                    <p>We initialize \(M_{CO}\) , \(M_{OP}\) and \(cM_{CO}\) , \(cM_{OP}\) to \(555 \times 555\) all
+                        zero matrices.
+                        Among these matrices, \(M_{CO}\) is to calculate cooperation score of two heroes;\(M_{OP}\) is
+                        to calculate
+                        confrontation score of two heroes in blue team's view; \(M_{OP}\) and \(cM_{CO}\) are to count
+                        the times
                         that two heroes cooperate and confronte.</p>
                     <p>Then process each line of mathce's data follow these steps to generate these matrices:</p>
                     <ol>
-                        <li>Assume the heroes in blue team have ids \(\lbrace I_{B1}, I_{B2}, I_{B3}, I_{B4}, I_{B5}\rbrace\) , and
+                        <li>Assume the heroes in blue team have ids \(\lbrace I_{B1}, I_{B2}, I_{B3}, I_{B4},
+                            I_{B5}\rbrace\) , and
                             those in red team are \(\lbrace I_{R1}, I_{R2}, I_{R3}, I_{R4}, I_{R5}\rbrace\) .</li>
-                        <li>For each hero in blue team, we say it's id is \(I_{Bn}\), modify matrix \(M_{CO}\) row \(I_{Bn}\)
-                            columns \(\lbrace I_{Bm} : 1 \leq m \leq 5, m \neq n\rbrace\). If blue team wins, we \(+1\) to these
+                        <li>For each hero in blue team, we say it's id is \(I_{Bn}\), modify matrix \(M_{CO}\) row
+                            \(I_{Bn}\)
+                            columns \(\lbrace I_{Bm} : 1 \leq m \leq 5, m \neq n\rbrace\). If blue team wins, we \(+1\)
+                            to these
                             cells, otherwise we \(-1\) to these cells.</li>
                         <li>For each hero in red team, we do the same thing to matrix \(M_{CO}\) .</li>
-                        <li>For each hero in blue team, we say it's id is \(I_{Bn}\) , modify matrix \(M_{OP}\) row \(I_{Bn}\)
-                            columns \(\lbrace I_{Rm} : 1 \leq m \leq 5\rbrace\). If blue team wins, we \(+1\) to these cells,
+                        <li>For each hero in blue team, we say it's id is \(I_{Bn}\) , modify matrix \(M_{OP}\) row
+                            \(I_{Bn}\)
+                            columns \(\lbrace I_{Rm} : 1 \leq m \leq 5\rbrace\). If blue team wins, we \(+1\) to these
+                            cells,
                             otherwise we \(-1\) to these cells.</li>
-                        <li>Divide each cell in \(M_{CO}\) by corresponding cell in \(cM_{CO}\), so does to \(M_{OP}\) .</li>
+                        <li>Divide each cell in \(M_{CO}\) by corresponding cell in \(cM_{CO}\), so does to \(M_{OP}\) .
+                        </li>
                         <li>Clear the diagonal cells of matrix \(M_{CO}\) and \(M_{OP}\) to \(0\) .</li>
                     </ol>
-                    <p>Then we realized that cooperation and confrontation may have different impact level on a match. So we 
-                        need to find out the balance weights \(\omega_{co}\) and \(\omega_{op}\) for \(M_{CO}\) and \(M_{OP}\) .</p>
-                    <p>We found the best weights by review each match's data and predict the win or lose: we culculate winning
+                    <p>Then we realized that cooperation and confrontation may have different impact level on a match.
+                        So we
+                        need to find out the balance weights \(\omega_{co}\) and \(\omega_{op}\) for \(M_{CO}\) and
+                        \(M_{OP}\) .</p>
+                    <p>We found the best weights by review each match's data and predict the win or lose: we culculate
+                        winning
                         score of each game by formula:</p>
                     <p>\[S = \omega_{co}M_{CO} + \omega_{op}M_{OP} \tag{1}\] </p>
                     <p>If \( S > 0\) , we predict the blue team wins and vice versa.</p>
-                    <p>By adjusting \(\omega_{co}\) and \(\omega_{op}\) stepwisly, we found the best weights to make correct
+                    <p>By adjusting \(\omega_{co}\) and \(\omega_{op}\) stepwisly, we found the best weights to make
+                        correct
                         rate the highest.</p>
-                    <p>After these processes, we got our module matrices \(M_{CO}\) and \(M_{OP}\) . And we found out the best
-                        weight for  \(M_{CO}\) and \(M_{OP}\) is \(\omega_{co} = 7\) and \(\omega_{op} = 5\) .</p>
+                    <p>After these processes, we got our module matrices \(M_{CO}\) and \(M_{OP}\) . And we found out
+                        the best
+                        weight for \(M_{CO}\) and \(M_{OP}\) is \(\omega_{co} = 7\) and \(\omega_{op} = 5\) .</p>
 
                     <h3>Verification of Reliability</h3>
-                    <p>We use 55.8MB data to train our module, got matrices \(M_{CO}\) and \(M_{OP}\). Then use 1.57MB data to test 
+                    <p>We use 55.8MB data to train our module, got matrices \(M_{CO}\) and \(M_{OP}\). Then use 1.57MB
+                        data to test
                         the reliability of our module.</p>
-                    <p>We test the reliability by predict win/lose of each match. If the correct rate is large enough, we believe
+                    <p>We test the reliability by predict win/lose of each match. If the correct rate is large enough,
+                        we believe
                         it's effective.</p>
-                    <p>After testing, we got our correct rate nearly 57%. Accroding to data on web, we can say this rate is really
+                    <p>After testing, we got our correct rate nearly 57%. Accroding to data on web, we can say this rate
+                        is really
                         high. So our module is reliable.</p>
                     <h3>Making Recommendations</h3>
                     <p>First, we get the current situation. For example, we only take \(\lbrace I_{B1} \rbrace\) and
                         \(\lbrace I_{R1}, I_{R2} \rbrace\) .</p>
-                    <p>If we only need recommend 1 hero, accroding to \((1)\) , we culculate each hero's score if it's added in
-                        \(\lbrace S_{Bm} : 1 \leq m \leq 555 \rbrace \) . Sort scores and return the first ten results.</p>
-                    <p>If we have to recommend 2 heroes, we will culculate each combination's scroe, and do the same thing.</p>
-                    <p>When we culculating the scores, if the hero is in ban list or have already been picked, we will jump it.</p>
+                    <p>If we only need recommend 1 hero, accroding to \((1)\) , we culculate each hero's score if it's
+                        added in
+                        \(\lbrace S_{Bm} : 1 \leq m \leq 555 \rbrace \) . Sort scores and return the first ten results.
+                    </p>
+                    <p>If we have to recommend 2 heroes, we will culculate each combination's scroe, and do the same
+                        thing.</p>
+                    <p>When we culculating the scores, if the hero is in ban list or have already been picked, we will
+                        jump it.</p>
                 </div>
                 <div class="tab-pane fade" id="list-i" role="tabpanel" aria-labelledby="list-i-list">
                     <h1>Implement</h1>
                     <h2>Blueprint</h2>
                     <ol>
-                        <li>2 player playing LOL, in the BP tern. Theye notices that out team picked <i>Garen</i>, and opponents
+                        <li>2 player playing LOL, in the BP tern. Theye notices that out team picked <i>Garen</i>, and
+                            opponents
                             picked <i>Quinn</i> and <i>Xerath</i> already. And now it's there turn to pick.</li>
-                        <li>They goto our <a href="index.html">recommendation system</a>, and chose the heroes in input boxes.</li>
+                        <li>They goto our <a href="index.html">recommendation system</a>, and chose the heroes in input
+                            boxes.</li>
                         <li>They choose they want 2 heroes' recommendation, and click "Submit" button.</li>
-                        <li>After a while, system gives them it's recommendation: <i>Dr. Mundo</i> and <i>Kog'Maw</i>.</li>
+                        <li>After a while, system gives them it's recommendation: <i>Dr. Mundo</i> and <i>Kog'Maw</i>.
+                        </li>
                         <li>They pick heroes following the recommendation, and they win the game easily finally.</li>
                     </ol>
                     <h2>Training</h2>
-                    <p>For convienience in matrix computing, we used <i>Matlab</i> to train our module and got our matrices.
+                    <p>For convienience in matrix computing, we used <i>Matlab</i> to train our module and got our
+                        matrices.
                         Then save \(M_{CO}\) and \(M_{OP}\) into csv file.</p>
                     <h2>Front-end Design</h2>
                     <p>We used <i>Bootstrap</i> to build front-end of this website. With the help of
@@ -293,18 +333,23 @@
                         parameters to server side by AJAX in GET method. (POST and command line are also avaliable)</p>
                     <h2>Back-end Design</h2>
                     <p>We tried both <i>Python Flask</i> and <i>PHP</i>. But finally we choosed <i>PHP</i>.</p>
-                    <p>This is because <a href="https://www.yuansasi.com">my server</a> is running host app <i>IIS</i> which
-                        occupied the ports and host name, so <i>Python Flask</i> cannot communicate with public Internet.</p>
-                    <p>In this case, we used <i>PHP</i> to make response of AJAX requests. Because <i>PHP</i> works really well
+                    <p>This is because <a href="https://www.yuansasi.com">my server</a> is running host app <i>IIS</i>
+                        which
+                        occupied the ports and host name, so <i>Python Flask</i> cannot communicate with public
+                        Internet.</p>
+                    <p>In this case, we used <i>PHP</i> to make response of AJAX requests. Because <i>PHP</i> works
+                        really well
                         in <i>IIS</i>.</p>
-                    <p>We got AJAX request from front-end, load \(M_{CO}\) and \(M_{OP}\) , parse parameters, calculate the
-                        heroes' combination that make score \(S\) the highest. Then return 10 results back in JSON format.</p>
+                    <p>We got AJAX request from front-end, load \(M_{CO}\) and \(M_{OP}\) , parse parameters, calculate
+                        the
+                        heroes' combination that make score \(S\) the highest. Then return 10 results back in JSON
+                        format.</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    
+
+
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
         <div class="toast-header">
             <img src="img/square.png" class="rounded mr-2" style="height: 1.5em;">
@@ -319,17 +364,8 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script>
-        //$('.toast').toast("show")
-    </script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

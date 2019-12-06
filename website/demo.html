@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Best PB in LOL</title>
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <title>Best BP - Demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" type="image/png" href="img/square.png">
     <link rel="stylesheet" href="css/demo.css">
-    <script src="https://kit.fontawesome.com/d0b7ea6fca.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">
@@ -27,61 +25,91 @@
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="progress.html">Progress</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub
-                    <i class="fas fa-external-link-alt"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/zy2362/Best-BP-in-LOL">GitHub</a></li>
                 <li class="nav-item active"><a class="nav-link" href="demo.html">Demo</a></li>
             </ul>
         </div>
     </nav>
 
-    <h1 class="display-3">The Best BP<span class="badge badge badge-success"
-        style="font-size: .2em; vertical-align: top;position: relative; top: 1.5em;left: .5em;">Demo</span></h1>
+    <h1 class="display-3">The Best BP</h1>
 
     <form name="paras" onsubmit="return false;">
         <table>
-            <tr><td colspan="4"><h3>Ban Turn</h3></td></tr>
             <tr>
-                <td>Ban 1: </td><td class="module" id="b1m"></td>
-                <td>Ban 6: </td><td class="module" id="b6m"></td>
+                <td colspan="4">
+                    <h3>Ban Turn</h3>
+                </td>
             </tr>
             <tr>
-                <td>Ban 2: </td><td class="module" id="b2m"></td>
-                <td>Ban 7: </td><td class="module" id="b7m"></td>
+                <td>Ban 1: </td>
+                <td class="module" id="b1m"></td>
+                <td>Ban 6: </td>
+                <td class="module" id="b6m"></td>
             </tr>
             <tr>
-                <td>Ban 3: </td><td class="module" id="b3m"></td>
-                <td>Ban 8: </td><td class="module" id="b8m"></td>
+                <td>Ban 2: </td>
+                <td class="module" id="b2m"></td>
+                <td>Ban 7: </td>
+                <td class="module" id="b7m"></td>
             </tr>
             <tr>
-                <td>Ban 4: </td><td class="module" id="b4m"></td>
-                <td>Ban 9: </td><td class="module" id="b9m"></td>
+                <td>Ban 3: </td>
+                <td class="module" id="b3m"></td>
+                <td>Ban 8: </td>
+                <td class="module" id="b8m"></td>
             </tr>
             <tr>
-                <td>Ban 5: </td><td class="module" id="b5m"></td>
-                <td>Ban 10: </td><td class="module" id="b10m"></td>
-            </tr>
-            <tr><td colspan="4"><h3>Pick Turn</h3></td></tr>
-            <tr>
-                <td>Our Pick 1: </td><td class="module" id="p1m"></td>
-                <td>Their Pick 1: </td><td class="module" id="p6m"></td>
+                <td>Ban 4: </td>
+                <td class="module" id="b4m"></td>
+                <td>Ban 9: </td>
+                <td class="module" id="b9m"></td>
             </tr>
             <tr>
-                <td>Our Pick 2: </td><td class="module" id="p2m"></td>
-                <td>Their Pick 2: </td><td class="module" id="p7m"></td>
+                <td>Ban 5: </td>
+                <td class="module" id="b5m"></td>
+                <td>Ban 10: </td>
+                <td class="module" id="b10m"></td>
             </tr>
             <tr>
-                <td>Our Pick 3: </td><td class="module" id="p3m"></td>
-                <td>Their Pick 3: </td><td class="module" id="p8m"></td>
+                <td colspan="4">
+                    <h3>Pick Turn</h3>
+                </td>
             </tr>
             <tr>
-                <td>Our Pick 4: </td><td class="module" id="p4m"></td>
-                <td>Their Pick 4: </td><td class="module" id="p9m"></td>
+                <td>Our Pick 1: </td>
+                <td class="module" id="p1m"></td>
+                <td>Their Pick 1: </td>
+                <td class="module" id="p6m"></td>
             </tr>
             <tr>
-                <td>Our Pick 5: </td><td class="module" id="p5m"></td>
-                <td>Their Pick 5: </td><td class="module" id="p10m"></td>
+                <td>Our Pick 2: </td>
+                <td class="module" id="p2m"></td>
+                <td>Their Pick 2: </td>
+                <td class="module" id="p7m"></td>
             </tr>
-            <tr><td colspan="4"><h3>Setting</h3></td></tr>
+            <tr>
+                <td>Our Pick 3: </td>
+                <td class="module" id="p3m"></td>
+                <td>Their Pick 3: </td>
+                <td class="module" id="p8m"></td>
+            </tr>
+            <tr>
+                <td>Our Pick 4: </td>
+                <td class="module" id="p4m"></td>
+                <td>Their Pick 4: </td>
+                <td class="module" id="p9m"></td>
+            </tr>
+            <tr>
+                <td>Our Pick 5: </td>
+                <td class="module" id="p5m"></td>
+                <td>Their Pick 5: </td>
+                <td class="module" id="p10m"></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <h3>Setting</h3>
+                </td>
+            </tr>
             <tr>
                 <td>I need:</td>
                 <td colspan="3">
@@ -101,39 +129,70 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><th scope="row"> 1st</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 2nd</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 3rd</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 4th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 5th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 6th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 7th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 8th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row"> 9th</th><td class="rs" colspan="3">/</td></tr>
-                <tr><th scope="row">10th</th><td class="rs" colspan="3">/</td></tr>
+                <tr>
+                    <th scope="row"> 1st</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 2nd</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 3rd</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 4th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 5th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 6th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 7th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 8th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row"> 9th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
+                <tr>
+                    <th scope="row">10th</th>
+                    <td class="rs" colspan="3">/</td>
+                </tr>
             </tbody>
         </table>
-        
+
         <table>
-            <tr><td colspan="2"><h3></h3></td></tr>
             <tr>
-                <td><button type="button" class="btn btn-primary btn-lg btn-block" onclick="formSubmit();" id="btn">Submit</button></td>
+                <td colspan="2">
+                    <h3></h3>
+                </td>
             </tr>
             <tr>
-                <td><a href="https://zh.surveymonkey.com/r/ZVBBTNW"><button type="button" class="btn btn-light btn-lg btn-block">Take Survey <i class="far fa-kiss-wink-heart"></i></button></a></td>
+                <td><button type="button" class="btn btn-primary btn-lg btn-block" onclick="formSubmit();"
+                        id="btn">Submit</button></td>
+            </tr>
+            <tr>
+                <td><a href="https://zh.surveymonkey.com/r/ZVBBTNW"><button type="button"
+                            class="btn btn-light btn-lg btn-block">Take Survey <i
+                                class="far fa-kiss-wink-heart"></i></button></a></td>
             </tr>
         </table>
     </form>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <script src="JS/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/demo.js"></script>
 </body>
+
 </html>

@@ -11,6 +11,7 @@ body {
     background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7)), url(https://static.invenglobal.com/upload/image/2019/11/27/i1574888444441900.jpeg);
     background-size: cover;
     background-position-x: 50%;
+    background-attachment: fixed;
 }
 nav {
     position: sticky;

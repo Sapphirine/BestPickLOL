@@ -43,14 +43,13 @@ function recommend2() {
         if(in_array($i + 1, $skip))
             continue;
         else
-            for($j = $i + 1; $j < 555; $j++) {
-                $ids1[$counter] = $i + 1;
-                $ids2[$counter] = $j + 1;
-                if(in_array($j + 1, $skip)) {
-                    $S[$counter] = 0;
-                    $counter++;
+            for($j = $i + 1; $j < 555; $j++)
+                if(in_array($j + 1, $skip))
                     continue;
-                } else {
+                else {
+                    $ids1[$counter] = $i + 1;
+                    $ids2[$counter] = $j + 1;
+                    $S[$counter] = 0;
                     $Sco = 0;
                     $Sop = 0;
                     foreach($pick0 as $id)
@@ -60,7 +59,6 @@ function recommend2() {
                     $S[$counter] = $Sco*$Wco + $Sop*$Wop;
                     $counter++;
                 }
-            }
     array_multisort($S,SORT_DESC,$ids1,$ids2);
     $top10_1 = implode(',', array_slice($ids1, 0, 10));
     $top10_2 = implode(',', array_slice($ids2, 0, 10));
