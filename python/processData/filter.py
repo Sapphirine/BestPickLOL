@@ -1,6 +1,6 @@
 
 ADDRESS = "data/3187/all"
-FILE_NUM = 1
+FILE_NUM = 17
 
 """
     gameDuration, mapId, <winnerTeam>,

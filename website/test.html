@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Info</title>
+</head>
+<body>
+    
+</body>
+<script>
+    request();
+    function request() {
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                main(xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET", "data.csv", true);
+        xmlhttp.send();
+    }
+
+    function main(data) {
+        // data 是读到的 CSV 文件（字符串格式）
+         document.body.innerHTML = data; // 本一行可以方便地看data结果
+        // TODO: 在下面处理 data 后绘图
+
+    }
+</script>
+</html>

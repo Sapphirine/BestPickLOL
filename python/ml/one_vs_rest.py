@@ -39,7 +39,7 @@ if __name__ == "__main__":
     data = assembler.transform(data)
 
     # Split data into train and test
-    rSplit = data.randomSplit([0.95,0.05], 100)
+    rSplit = data.randomSplit([0.97,0.03], 100)
     dataTrain = rSplit[0].select("features", labelColumn)
     dataTest = rSplit[1].select("features", labelColumn)
 
