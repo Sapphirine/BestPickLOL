@@ -1,34 +1,55 @@
 body {
-    position: relative;
     display: flex;
     flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-image: linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,.9)), url(https://static.invenglobal.com/upload/image/2019/11/27/i1574888444441900.jpeg);
-    background-attachment: fixed;
 }
-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
+
+path {
+    stroke: #fff;
 }
-h1 {
-    width: 100%;
+
+path:hover {
+    opacity: 0.9;
 }
-h3 {
-    margin-top: 1em;
+
+rect:hover {
+    fill: blue;
 }
-table {
-    width: 100%;
+
+.axis {
+    font: 10px sans-serif;
 }
-.table2 {
-    margin: 2em 0;
+
+.legend tr {
+    border-bottom: 1px solid grey;
 }
-.btn {
-    margin-bottom: 1em;
-    transition: all .5s;
+
+.legend tr:first-child {
+    border-top: 1px solid grey;
 }
-#r {
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
     display: none;
+}
+
+.legend {
+    margin-bottom: 76px;
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.legend td {
+    padding: 4px 5px;
+    vertical-align: bottom;
+}
+
+.legendFreq, .legendPerc {
+    text-align: right;
+    width: 50px;
 }

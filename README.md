@@ -1,15 +1,10 @@
 # The Best Pick and Ban Stratgy for LOL
 
-## About
+This project can make legend picking recommendation based on the BP condition.
 
-This hub is made for course project (Big Data Analysis course in Columbia University).
+It can also predict a game's win or lose based on picked legends. The correct rate can be up to 58%.
 
-We are a team to build this. We are: 杨子涵 (Yang Zihan), 罗浩 (Luo Hao), 陈伟晗 (Chen Weihan).
-
-Feel free to use and learn it. If possible, we strongly recommend you to add a refference link to this project, report bugs and make contribution!
-
-
-## How to Use
+## Usage Instruction
 
 You need to apply for one or more developer API key in [Riot official website](https://developer.riotgames.com/).
 
@@ -44,3 +39,11 @@ Then you can follow the following steps to start your progress:
 ### Trick: Get Data Using More Instances
 
 If you are a individual, it may be not realistic to apply for advanced API key, which means your request frequency is strictly limited. So you may apply for more API keys (let's say n keys), and
+
+## About
+
+This hub is made for course project (Big Data Analysis course in Columbia University).
+
+We are a team to build this. We are: 杨子涵 (Yang Zihan), 罗浩 (Luo Hao), 陈伟晗 (Chen Weihan).
+
+Feel free to use and learn it. If possible, we strongly recommend you to add a refference link to this project, report bugs and make contribution!
